@@ -31,15 +31,21 @@ num_item=1
 
 while True:
     while add_item:
-        if (answer:=input('Add item? [y/n]')) in 'yY':
+        if (answer:=input('Add item? [y/n]')) in 'yY' and answer:
             break
-        elif answer not in 'nN':
+        elif answer not in 'nN' or not answer:
             print('please type: y - yes or n - no ')
             continue
         add_item=False
     else:
         break
     item_param={}
+    while True:
+        try:
+            user_num=int(input('enter item number:'))
+            break
+        except ValueError:
+            print('error! only numbers')
     for key,val in params.items():
         if val:
             while True:
@@ -52,7 +58,8 @@ while True:
         else :
             item_param[key]=input(key + ': ')
             analytics[key].add(item_param[key])
-    item_list.append((num_item,item_param))
+    item_list.append((user_num, item_param))
+#    item_list.append((num_item,item_param))
     num_item+=1
 print(item_list)
 
