@@ -31,9 +31,9 @@ num_item=1
 
 while True:
     while add_item:
-        if (answer:=input('Add item? [y/n]')) in 'yY' and answer:
+        if (answer:=input('Add item? [y/n]')) and answer in 'yY':
             break
-        elif answer not in 'nN' or not answer:
+        elif not answer or answer not in 'nN':
             print('please type: y - yes or n - no ')
             continue
         add_item=False
