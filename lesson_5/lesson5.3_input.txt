@@ -1,0 +1,10 @@
+Tesla 14045.35
+Jobs 34727.95
+Einstein 15467.48
+Gates 25798.84
+Musk 24684.25
+da Vinci 12546.57
+Hawking 19543.57
+Newton 11467.77
+Edison 18085.36
+Ford 16088.13
